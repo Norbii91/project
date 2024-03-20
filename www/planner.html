@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/service.js"></script>
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Daily Planner</title>
+</head>
+<body onload="">
+    <header>
+        <div class="logo">DailyPlanner</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a href="main.html" >Home</a>
+                </li>
+                <li>
+                    <a href="" class="active">Planning</a>
+                </li>
+                <li>
+                    <a href="myplans.html">My Plans</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <div class="container2" style="font-size: 28px;">
+        <div class="card" style="justify-content: center">
+        
+        <form>
+            <h1 style="margin-top: 15px; margin-left: 25px; text-align:center; align-items: center;">Planner</h1>
+            <div class="label_input vertical center">
+                <label style="margin-bottom: 15px;" for="name">Name of the activity:</label>
+                <input style="margin-bottom: 15px;" type="text" id="name" name="name" placeholder="Enter the name of the activity" required>
+                
+                <label  style="margin-bottom: 15px;" class="" for="date">Date and Time:</label>
+                <input style="margin-bottom: 15px;" class="datepicker" type="datetime-local" id="date" name="date" required>
+
+                
+
+                <label style="margin-bottom: 15px;" for="description">Description:</label>
+                <textarea style="margin-bottom: 45px;" style="resize: none;" id="description" name="description" placeholder="Enter a description"></textarea>
+                <button class="submitPlan" onclick="submitPlan()" type="submit">Add to Planner</button>
+
+                
+            </div>
+            
+        </div>
+        </form>
+        
+    </div>
+    <footer class="footer">2024 Daily Planner v1.0</footer>
+</body>
+</html>

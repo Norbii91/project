@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "futura md bt";
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body {
+    background: dodgerblue;
+    height: 100vh;
+}
+header {
+    background: #fff;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+header .logo {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    color: #000;
+    padding: 5px 0;
+    margin: 0 10px;
+    border: 3px solid transparent;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+header nav ul li a:hover,
+header nav ul li a.active {
+    border-bottom-color: dodgerblue;
+}
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background: #000;
+}
+@media only screen and (max-width: 1200px) {
+    .hamburger {
+        display: block;
+    }
+    body{
+        height: 100%;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+    .r2{
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    body{
+        height: 100%;
+        font-size: 20px;
+    }
+    header nav {
+        position: absolute;
+        width: 100%;
+        left: -100%;
+        top: 70px;
+        width: 100%;
+        background: #fff;
+        padding: 30px;
+        transition: 0.3s;
+    }
+    
+    header #nav_check:checked ~ nav {
+        left: 0;
+    }
+    header nav ul {
+        display: block;
+    }
+    header nav ul li a {
+        margin: 5px 0;
+    }
+    .r2{
+        display: none;
+    }
+    .container{
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    .randomduma {
+        width: 30vh;
+        margin:15px;
+    }
+
+    
+    
+}
+
+
+
+.container{
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+}
+
+.randomduma{
+    font-size: 24px;
+    font-weight: 600;
+    font-family:'Courier New', Courier, monospace;
+    color: black;
+    font-variant: small-caps;
+    flex: 1;
+    box-sizing: border-box;
+    width: 50vw;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.ideaKep{
+   width: 55vh;
+   height: 55vh;
+   cursor: pointer;
+}
+
+.btnStart{
+    text-align: center;
+}
+
+h1{
+    color: black;
+}
+
+
+.label_input{
+    
+    margin-top: 10vh;
+    position: absolute;
+    
+}
+
+input, textarea {
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+footer{
+    position: absolute;
+    font-weight: bold;
+    font-size: 24px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+.wompwomp{
+    margin-top: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+.loginfield{
+    align-self: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 75px;
+    
+}
+
+.loginbtn{
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/*Planner*/
+.container2{
+    
+    flex: 1;
+    margin-top: 75px;
+}
+
+.container3{
+    flex: 1;
+}
+form{
+    margin-top: 45px;
+}
+
+
+.card {
+    display: flex;
+    border: 5px solid;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    top: 146px;
+    left: 264px;
+    width: 75vw;
+    height: 75vh;
+    background-color: #f2f2f2;
+    border-radius: 26px;
+}
+
+.submitPlan{
+    padding: 6px;
+    background-color: lightblue;
+    border: 2px solid black;
+    border-radius: 555px;
+}
+
+/*MyPlans*/
+.legordulo{
+  margin-left: auto;        /* A jobb szélre igazítás margin használatával */
+  display: block;           /* Meggyőződünk róla, hogy blokk elemként jelenik meg */
+
+}
+
+select{
+    border: 2px solid dodgerblue;
+    border-radius: 25px;
+    padding: 4.5px;
+    text-align: left;
+    font-size: larger;
+}

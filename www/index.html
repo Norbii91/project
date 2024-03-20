@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/service.js"></script>
+    <link rel="stylesheet" href="css/flex.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Daily Planner</title>
+</head>
+<body onload="start()">
+    <header>
+        <div class="logo">DailyPlanner</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a>Home</a>
+                </li>
+                <li>
+                    <a>Planning</a>
+                </li>
+                <li>
+                    <a>My Plans</a>
+                </li>
+                
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+        <div class="loginfield">
+            <h1>Name:</h3>
+                <br>
+            <input id="uid" type="text" title="Név:">
+            <br>
+            <h1>Password:</h3>
+            <br>
+            <input id="pwd" type="password" title="Jelszó" id="">
+            <br>
+            <img onclick="login()" class="loginbtn" src="images/user-login-button-svgrepo-com.svg" alt="loginbutton">
+        </div>
+    
+    <footer class="footer">2024 Daily Planner v1.0</footer>
+</body>
+</html>

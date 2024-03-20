@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/service.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Daily Planner</title>
+</head>
+<body onload="">
+    <header>
+        <div class="logo">DailyPlanner</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a href="" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="planner.html">Planning</a>
+                </li>
+                <li>
+                    <a href="myplans.html">My Plans</a>
+                </li>
+                <li id="aLogin" style="display: none;">
+                    <a href="index.html">Login</a>
+                </li>
+                <li>
+                    <a onclick="logout()" id="logout">Logout --></a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
+    <div class="container">
+        <div class="randomduma"> 
+          <h1>Welcome to Daily Planner 1.0</h1>
+          <br><br>
+          <p>🚀 Unleash Your Productivity Power with our Daily Planner v1.0! 🌟
+            <br>
+            🔥 Why settle for ordinary when you can achieve extraordinary? Daily Planner v1.0 is not just a platform; it's your personal command center for productivity. Seamlessly organize your tasks, set goals, and watch your productivity soar to new heights!
+            <br>
+            💡 Ignite your motivation! With our intuitive interface, you'll effortlessly prioritize, categorize, and conquer your tasks. No more feeling overwhelmed—just pure, unadulterated focus on what truly matters.
+            <br>
+            🚨 Break free from procrastination! Daily Planner v1.0 is not just a list; it's a game-changer. Dynamic reminders, progress tracking, and a sprinkle of motivation will keep you on track, turning your to-dos into ta-das!
+            <br>
+            🎯 Are you ready to be the master of your destiny? Embrace the future of productivity with Daily Planner v1.0. Join the movement of achievers who are turning dreams into deadlines, and make each day count!
+        </div>
+      <div class="randomduma r2">
+        <div class="btnStart">
+            Get Started
+                <br>
+            Click on the Bulb
+        </div>
+        <img onclick="btn1()" class="ideaKep" src="./images/idea.svg" title="Plan Ahead of Time" alt="Idea">
+      </div>
+    </div>
+      <footer class="footer horizontal center">2024 Daily Planner v1.0</footer>
+</body>
+</html>
