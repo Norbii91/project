@@ -41,7 +41,7 @@ class Service {
             }).then(response => response.json()).then((data) => {
 
                 // Eredmény visszaadása
-
+                
                 resolve(data)
             }).catch((error) => {
 
@@ -53,7 +53,7 @@ class Service {
     }
 
     /**
-     * Betölti a tervek listáját.
+     * Betölti a tantárgyak listáját.
      * 
      * @returns {Promise}   promise Promise objektum
      */
@@ -80,16 +80,15 @@ class Service {
                 },
                 body: data
             }).then(response => response.json()).then((data) => {
-                const users = []
-
+                const plans = []
+                console.log("valami tortenik")
                 for (const d of data) {
-                    users.push(new User(d.PID, d.PLANNAME, d.DATE, d.DESCRIPTION))
+                    plans.push(new Plans(d.PID, d.PLANNAME, d.DATE, d.DESCRIPTION))
                 }
-
                 
                 // Eredmény visszaadása
 
-                resolve(users)
+                resolve(plans)
             }).catch((error) => {
 
                 // Hiba történt
