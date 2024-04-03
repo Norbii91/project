@@ -7,11 +7,12 @@
     <script src="js/index.js"></script>
     <script src="js/app.js"></script>
     <script src="js/service.js"></script>
+    <script src="js/model/plans.js"></script>
     <link rel="stylesheet" href="css/flex.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Daily Planner</title>
 </head>
-<body>
+<body onload="Service.loadPlans()">
     <header>
         <div class="logo">DailyPlanner</div>
         <input type="checkbox" id="nav_check" hidden>
@@ -45,14 +46,14 @@
                 <option value="2" onselect="sortByDate()">Date</option>
             </select>
         </div>
-        <div><button onclick="Service.loadPlans()">Nnnnn</button></div>
+        
 
         <div class="tervek">
             <table id="plantable">
 
             </table>
         </div>
-
+        <div><button onclick="Service.loadPlans()">Varazsgomb</button></div>
     </div>
         <footer class="footer">2024 Daily Planner v1.0</footer>
 </body>
