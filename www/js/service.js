@@ -81,7 +81,9 @@ class Service {
                 body: data
             }).then(response => response.json()).then((data) => {
                 const plans = []
+
                 console.log("valami tortenik")
+                
                 for (const d of data) {
                     plans.push(new Plans(d.PID, d.PLANNAME, d.DATE, d.DESCRIPTION))
                 }
