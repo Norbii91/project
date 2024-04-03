@@ -20,10 +20,7 @@ app.post('/api', async (request, response) => {
         const name = await Service.login(request.body.uid, request.body.password)
 
         response.send(JSON.stringify({ name: name }))
-    } else if (request.body.action && request.body.action === 'loadusers') {
-        const users = await Service.loadUsers()
-        response.send(JSON.stringify(users))
-
+        
     } else if (request.body.action && request.body.action === 'loadplans') {
         const plans = await Service.loadPlans()
         response.send(JSON.stringify(plans))
