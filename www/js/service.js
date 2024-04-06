@@ -82,6 +82,7 @@ class Service {
             }).then(response => response.json()).then((data) => {
                 const plans = []
 
+                
                 console.log("valami tortenik")
                 
                 for (const d of data) {
@@ -89,7 +90,7 @@ class Service {
                 }
                 
                 // Eredmény visszaadása
-
+                
                 resolve(plans)
             }).catch((error) => {
 

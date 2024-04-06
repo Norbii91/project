@@ -73,13 +73,13 @@ module.exports = class Service {
         // Tervek betöltése
 
         const result = await db.run(`
-            SELECT   PID,PLANNAME,DATE,DESCRIPTION
+            SELECT   PID,PLANNAME, DATE,DESCRIPTION
             FROM     PLANS
             ORDER BY PID
         `)
         
-        // Tervek visszaadása
 
+        // Tervek visszaadása 
         return result
     }
 

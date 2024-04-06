@@ -8,6 +8,7 @@
     <script src="js/app.js"></script>
     <script src="js/service.js"></script>
     <script src="js/model/plans.js"></script>
+    <script src="js/screen/planmaintenance.js"></script>
     <link rel="stylesheet" href="css/flex.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Daily Planner</title>
@@ -30,30 +31,30 @@
                 
             </ul>
         </nav>
-        <label for="nav_check" class="hamburger">
+        <label for="nav_check" class="navos" onclick="makeSpace3()">
             <div></div>
             <div></div>
             <div></div>
         </label>
     </header>
-    <div class="container2 vertical center">
-        <div class="card">
-        <h1 style="margin-top: 15px; margin-left: 25px;">Your To-Do's ✨</h1>
-        
-        <div class="legordulo">
-            <select id="legordulo">Sort by
-                <option value="1" onselect="sortByName()">Name</option>
-                <option value="2" onselect="sortByDate()">Date</option>
-            </select>
-        </div>
-        
-
-        <div class="tervek">
-            <table id="plantable">
-
-            </table>
-        </div>
-        <div><button onclick="Service.loadPlans()">Varazsgomb</button></div>
+    <div class="container2" id="space3">
+        <div class="card" id="cardd">
+                <h1 style="margin-top: 15px; margin-left: 25px; height: 50px;">Your To-Do's <span onclick="showPlans(event)">✨</span></h1>
+                
+                <div class="legordulo">
+                    <select id="legordulo">Sort by
+                        <option value="1" onclick="showPlans(event)">Name</option>
+                        <option value="2" onclick="showPlans(event)">Date</option>
+                    </select>
+                </div>
+                <div class="column">
+                    
+                        
+                        <table id="plantable" class="center-justified">
+                            <p class="absoluteMsg" id="absoluteMsg">Click the ✨ emoticon to load your Plans</p>
+                        </table>
+                    
+                </div>
     </div>
         <footer class="footer">2024 Daily Planner v1.0</footer>
 </body>
