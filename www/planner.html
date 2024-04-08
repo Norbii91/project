@@ -42,16 +42,18 @@
             <h1 style="margin-top: 15px; text-align:center; align-items: center;">Planner</h1>
             <div class="label_input vertical center">
                 <label style="margin-bottom: 15px;" for="name">Name of the activity:</label>
-                <input style="margin-bottom: 15px;" type="text" id="name" name="name" placeholder="Enter the name of the activity" required>
+                <input style="margin-bottom: 15px;" type="text" id="name" placeholder="Enter the name of the activity">
                 
                 <label  style="margin-bottom: 15px;" class="" for="date">Date and Time:</label>
-                <input style="margin-bottom: 15px;" class="datepicker" type="date" style="align-content: center;" id="datePicker" name="date" required>
-
+                <input style="margin-bottom: 15px;" class="datepicker" type="date" style="align-content: center;" id="datePicker">
+<!--                 
+                <label  style="margin-bottom: 15px;" class="" for="date">User:</label>
+                <input style="margin-bottom: 15px;" class="uid" type="text" style="align-content: center;" id="uid"> -->
                 
 
                 <label style="margin-bottom: 15px;" for="description">Description:</label>
-                <textarea style="margin-bottom: 45px;" style="resize: none;" id="description" name="description" placeholder="Enter a description"></textarea>
-                <button class="submitPlan" onclick="newPlan()" type="submit">Add to Planner</button>
+                <textarea style="margin-bottom: 45px;" style="resize: none;" id="description" placeholder="Enter a description"></textarea>
+                <button class="submitPlan" onclick="insertData()" type="button">Add to Planner</button>
 
                 
             </div>

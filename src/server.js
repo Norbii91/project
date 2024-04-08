@@ -1,5 +1,5 @@
 // Szükséges modulok betöltése
-
+const mysql = require('mysql2');
 const express = require('express')
 const Service = require('./service')
 
@@ -29,9 +29,48 @@ app.post('/api', async (request, response) => {
 })
 
 
+const bodyParser = require('body-parser');
+
+
+const port = 3000;
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  port:'3307',
+  user: 'admin',
+  password: 'admin',
+  database: 'planner'
+});
+
+connection.connect();
+
+
+
+
+app.post('/api/insert', (req, res) => {
+    const data = req.body;
+    console.log(data.uid)
+    const sql = `INSERT INTO plans(PLANNAME, DATE, DESCRIPTION, UID) VALUES ("${data.name}","${data.date}","${data.description}","${data.uid}")`;
+    connection.query(sql, [data.name,data.date,data.description,data.uid], (err, result) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Error inserting data' });
+      } else {
+        res.json({ success: true, message: 'Data inserted successfully' });
+      }
+    });
+});
+
 
 const PORT = 9000
 
 console.log(`WEB -es kiszolgáló indítása a ${PORT} -porton`)
 
 app.listen(PORT)
+
+
+

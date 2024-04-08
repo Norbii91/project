@@ -3,6 +3,7 @@ var pressed2 = true;
 var pressed3 = true;
 
 
+
 /* Képre kattintásnál a planner-re ugrik */
 function btn1(){
     window.location.href = 'planner.html';
@@ -69,11 +70,33 @@ function makeSpace3() {
 }
 
 function setDate(){
-    const date = new Date();
-    const year = date. getFullYear();
-    const month = String(date. getMonth() + 1). padStart(2, '0');
-    const day = String(date. getDate()). padStart(2, '0');
-    const formattedDate = `${year}-${month}-${day}`;
-
+    var date = new Date();
+    var year = date.getFullYear();
+    var month = String(date. getMonth() + 1). padStart(2, '0');
+    var day = String(date. getDate()). padStart(2, '0');
+    var formattedDate = `${year}-${month}-${day}`;
     document.getElementById('datePicker').value = formattedDate;
 }
+
+function insertData(){
+    console.log('hehe')
+
+        var name = document.getElementById("name").value;
+        var date = document.getElementById("datePicker").value;
+        var description = document.getElementById("description").value;
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/api/insert", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+              alert("Data inserted successfully");
+            } else {
+              alert("Error inserting data");
+            }
+          }
+        };
+        console.log(JSON.stringify({ name: name, date: date, description:description, uid:"ADMIN" }))
+        xhr.send(JSON.stringify({ name: name, date: date, description:description, uid:"ADMIN" }));
+      }
