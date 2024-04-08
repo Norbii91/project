@@ -93,13 +93,12 @@ h1{
 
 
 .label_input{
-    
-    margin-top: 10vh;
-    
-    
+    margin-top: 5vh;
+    width: auto;
 }
 
 input, textarea {
+    width: 20vw;
     align-items: center;
     padding: 10px;
     margin-bottom: 16px;
@@ -132,7 +131,7 @@ footer{
     align-items: center;
     text-align: center;
     margin-top: 75px;
-    transition: margin 400ms;
+    transition: margin 500ms;
     
 }
 
@@ -147,19 +146,21 @@ footer{
 .container2{
     margin-top: 115px;
     flex: 1;
-    transition: margin 400ms;
+    transition: margin 500ms;
 }
 
 .container3{
     flex: 1;
 }
 form{
+    width: 75vw;
+    margin: 0 auto; 
     margin-top: 45px;
 }
 
 
 .card {
-    height: auto;
+    height: 75vh;
     position: relative;
     box-sizing: border-box;
     display: flex;
@@ -250,6 +251,11 @@ select{
     body{
         height: 100%;
     }
+
+    h1{
+        font-size: 36px;      
+    }
+
     header nav {
         position: absolute;
         width: 100%;
@@ -264,7 +270,7 @@ select{
         margin-top: 35px;
         margin-left: 50px;
         margin-right: 50px;
-        transition: margin 400ms;
+        transition: margin 500ms;
 
     }
     .showPlans {
@@ -289,19 +295,31 @@ select{
     }
     .container2{
         margin-top: 35px;
-        transition: margin 400ms;
+        transition: margin 500ms;
     }
     select{
         margin-top: 15px;
     }
     .card{
-        height: 80vh;
+        transition: margin 500ms;
+        height: 70vh;
+        width: 80vw;
     }
     #plantable{
         width: 75vw;
         font-size: smaller;
     }
-    
+    input{
+        width: 50vw;
+    }
+    textarea{
+        width: 45vw;
+    }
+    .label_input{
+        margin-top: 25px;
+        width: auto;
+        
+    }
 }
 @media only screen and (max-width: 768px) {
     .navos {
@@ -310,7 +328,7 @@ select{
     }
     .container2{
         margin-top: 35px;
-        transition: margin 400ms;
+        transition: margin 500ms;
     }
     body{
         height: 100%;
@@ -324,7 +342,7 @@ select{
         width: 100%;
         background: #fff;
         padding: 30px;
-        transition: 0.5s;
+        transition: 0.7s;
     }
     
     header #nav_check:checked ~ nav {
@@ -342,7 +360,7 @@ select{
     }
     .container{
         margin-top: 35px;
-        transition: margin 400ms;
+        transition: margin 500ms;
         justify-content: center;
         align-items: center;
     }
@@ -353,12 +371,14 @@ select{
         padding-bottom: 50px;
     }  
     h1{
-        font-size: 22px;
+        font-size: 36px;  
+        
     }
     .card{
         margin-top: 5vh;
-        transition: margin 400ms;
-        height: 80vh;
+        transition: margin 500ms;
+        height: 70vh;
+        width: 80vw;
     }
     select{
         margin-top: 15px;
@@ -367,5 +387,15 @@ select{
     #plantable{
         width: 75vw !important;
         font-size: smaller;
+    }
+
+    textarea{
+        width: 45vw;
+    }
+
+    .label_input{
+        margin-top: 25px;
+        width: auto;
+        text-align: center;
     }
 }
