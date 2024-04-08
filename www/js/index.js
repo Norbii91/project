@@ -69,6 +69,7 @@ function makeSpace3() {
     }  
 }
 
+/*A dátum input mezőt beállítja a mai napra*/
 function setDate(){
     var date = new Date();
     var year = date.getFullYear();
@@ -78,7 +79,8 @@ function setDate(){
     document.getElementById('datePicker').value = formattedDate;
 }
 
-function insertData(){
+
+function newPlan(){
     console.log('hehe')
 
         var name = document.getElementById("name").value;
@@ -91,9 +93,9 @@ function insertData(){
         xhr.onreadystatechange = function() {
           if (xhr.readyState == 4) {
             if (xhr.status == 200) {
-              alert("Data inserted successfully");
+              alert("Terv sikeresen mentve");
             } else {
-              alert("Error inserting data");
+              alert("Hiba");
             }
           }
         };
