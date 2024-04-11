@@ -42,14 +42,14 @@
             <h1 style="margin-top: 15px; text-align:center; align-items: center;">Planner</h1>
             <div class="label_input vertical center">
                 <label style="margin-bottom: 15px;" for="name">Name of the activity:</label>
-                <input style="margin-bottom: 15px;" type="text" id="name" placeholder="Enter the name of the activity">
+                <input onfocus="this.value=''" style="margin-bottom: 15px;" type="text" id="name" placeholder="Enter the name of the activity">
                 
                 <label  style="margin-bottom: 15px;" class="" for="date">Date and Time:</label>
-                <input style="margin-bottom: 15px;" class="datepicker" type="date" style="align-content: center;" id="datePicker">
+                <input  onfocus="this.value=''" style="margin-bottom: 15px;" class="datepicker" type="date" style="align-content: center;" id="datePicker">
               
 
                 <label style="margin-bottom: 15px;" for="description">Description:</label>
-                <textarea style="margin-bottom: 45px;" style="resize: none;" id="description" placeholder="Enter a description"></textarea>
+                <textarea onfocus="this.value=''" style="margin-bottom: 45px;" style="resize: none;" id="description" placeholder="Enter a description"></textarea>
                 <button class="submitPlan" onclick="newPlan()" type="button">Add to Planner</button>
 
                 

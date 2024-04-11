@@ -2,10 +2,10 @@
 const mysql = require('mysql2');
 const express = require('express')
 const Service = require('./service')
+const bodyParser = require('body-parser');
 
-/**
- * Indító modul.
- */
+
+/*Indító modul*/
 
 console.log('Rendszer indítás')
 
@@ -13,8 +13,19 @@ const app = express()
 
 app.use(express.static('./www'))
 app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
+const connection = mysql.createConnection({
+  host: 'localhost',
+  port:'3307',
+  user: 'admin',
+  password: 'admin',
+  database: 'planner'
+});
+connection.connect();
 
+/*REST API POST 1*/
 app.post('/api', async (request, response) => {
     if (request.body.action && request.body.action === 'login') {
         const name = await Service.login(request.body.uid, request.body.password)
@@ -29,28 +40,7 @@ app.post('/api', async (request, response) => {
 })
 
 
-const bodyParser = require('body-parser');
-
-
-const port = 3000;
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-
-
-const connection = mysql.createConnection({
-  host: 'localhost',
-  port:'3307',
-  user: 'admin',
-  password: 'admin',
-  database: 'planner'
-});
-
-connection.connect();
-
-
-
-
+/*REST API POST 2*/
 app.post('/api/insert', (req, res) => {
     const data = req.body;
     console.log(data.uid)
@@ -65,9 +55,8 @@ app.post('/api/insert', (req, res) => {
     });
 });
 
-
+/* PORT */
 const PORT = 9000
-
 console.log(`WEB -es kiszolgáló indítása a ${PORT} -porton`)
 
 app.listen(PORT)

@@ -93,12 +93,13 @@ function newPlan(){
         xhr.onreadystatechange = function() {
           if (xhr.readyState == 4) {
             if (xhr.status == 200) {
+                document.getElementById("name").value='';
+                document.getElementById("description").value='';
               alert("Terv sikeresen mentve");
             } else {
               alert("Hiba");
             }
           }
         };
-        console.log(JSON.stringify({ name: name, date: date, description:description, uid:"ADMIN" }))
         xhr.send(JSON.stringify({ name: name, date: date, description:description, uid:"ADMIN" }));
-      }
+}
