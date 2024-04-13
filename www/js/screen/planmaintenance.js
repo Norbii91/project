@@ -1,6 +1,5 @@
 /*Tervek kirajzolása, táblázat legenerálása az adatok mennyisége alapján*/
 async function showPlans() {
-    alert("Width of the device: " + window.innerWidth + "px");
         const table = document.getElementById('plantable');
         document.getElementById('absoluteMsg').style.display='none'
         table.innerHTML = "";

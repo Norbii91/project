@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: localhost:3307
--- Létrehozás ideje: 2024. Ápr 11. 14:39
+-- Létrehozás ideje: 2024. Ápr 13. 14:11
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.2.12
 
@@ -48,7 +48,17 @@ INSERT INTO `plans` (`PID`, `PLANNAME`, `DATE`, `DESCRIPTION`, `UID`) VALUES
 (3, 'Meditating', '2024-05-26', 'Getting to know myself better', 'ADMIN'),
 (4, 'Badminton', '2024-06-26', 'Xiaolin Showdown between our friends ', 'ADMIN'),
 (5, 'Petting my favourite Caracal ', '2024-06-11', 'ig:bigfloppagosha.official', 'ADMIN'),
-(6, 'Checking out Budavári Palota', '2024-04-08', 'Looks wack', 'ADMIN');
+(6, 'Checking out Budavári Palota', '2024-04-08', 'Looks wack', 'ADMIN'),
+(7, 'Yoga Class', '2024-04-15', 'Join a relaxing yoga class to unwind and improve flexibility.', 'ADMIN'),
+(8, 'Cooking Workshop', '2024-04-20', 'Learn new culinary skills and recipes in a hands-on cooking workshop.', 'ADMIN'),
+(9, 'Hiking Trip', '2024-05-01', 'Explore natures beauty and challenge yourself on a scenic hiking trail.', 'ADMIN'),
+(10, 'Book Club Meeting', '2024-04-25', 'Engage in lively discussions about the latest novel with fellow book enthusiasts.', 'ADMIN'),
+(11, 'Painting Class', '2024-04-18', 'Unleash your creativity and express yourself through acrylic painting techniques.', 'ADMIN'),
+(12, 'Volunteer Day at Animal Shelter', '2024-05-05', 'Make a difference in the lives of shelter animals by volunteering your time and care.', 'ADMIN'),
+(13, 'Language Exchange Meetup', '2024-04-22', 'Practice speaking a new language and meet language learners from diverse backgrounds.', 'ADMIN'),
+(14, 'Photography Walk', '2024-04-28', 'Capture the beauty of the cityscape or natural surroundings on a guided photography walk.', 'ADMIN'),
+(15, 'Meditation Session', '2024-04-17', 'Cultivate inner peace and mindfulness through guided meditation techniques.', 'ADMIN'),
+(16, 'Dance Workshop', '2024-04-30', 'Learn new dance moves and rhythms in a fun and energetic dance workshop.', 'ADMIN');
 
 -- --------------------------------------------------------
 
@@ -95,7 +105,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `plans`
 --
 ALTER TABLE `plans`
-  MODIFY `PID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `PID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Megkötések a kiírt táblákhoz
