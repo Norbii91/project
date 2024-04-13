@@ -83,7 +83,7 @@ class Service {
                 const plans = []
 
                 
-                console.log("valami tortenik")
+                console.log("Tervek betoltese/frissitese")
                 
                 for (const d of data) {
                     plans.push(new Plans(d.PID, d.PLANNAME, d.DATE, d.DESCRIPTION))
@@ -92,6 +92,50 @@ class Service {
                 // Eredmény visszaadása
                 
                 resolve(plans)
+            }).catch((error) => {
+
+                // Hiba történt
+
+                reject(error)
+            })
+        })
+    }
+
+
+    /**
+     * Törli a megadott tantárgyat.
+     * 
+     * @param   {Plans}   plan     törlendő tantárgy
+     * @returns {Promise}   promise     Promise objektum
+     */
+
+    static deletePlan(plan) {
+
+        // Promise objektum visszaadása
+
+        return new Promise((resolve, reject) => {
+            
+            // Adatok előkészítése
+            console.log("Valami törlődik")
+            const data = JSON.stringify({ 
+                action:         'deleteplan', 
+                plan:        plan.toJSON()
+            })
+        
+            // POST kérés elküldése
+
+            fetch('/api', { 
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Content-Length': data.length
+                },
+                body: data
+            }).then(response => response.json()).then((data) => {
+
+                // Eredmény visszaadása
+
+                resolve(true)
             }).catch((error) => {
 
                 // Hiba történt

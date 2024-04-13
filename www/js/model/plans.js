@@ -131,7 +131,7 @@
 
     toJSON() {
         return { 
-            ID:             this.#PID,
+            PID:             this.#PID,
             PLANNAME:    this.#PLANNAME,
             DATE:       this.#DATE,
             DESCRIPTION: this.#DESCRIPTION
@@ -145,6 +145,6 @@
      */
 
     toString() {
-        return `ID: ${this.#PID}, Név: ${this.#PLANNAME}, Dátum: ${this.#DATE}, Leírás: ${this.#DESCRIPTION}`
+        return `PID: ${this.#PID}, Név: ${this.#PLANNAME}, Dátum: ${this.#DATE}, Leírás: ${this.#DESCRIPTION}`
     }
 }

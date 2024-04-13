@@ -81,8 +81,6 @@ function setDate(){
 
 
 function newPlan(){
-    console.log('hehe')
-
         var name = document.getElementById("name").value;
         var date = document.getElementById("datePicker").value;
         var description = document.getElementById("description").value;

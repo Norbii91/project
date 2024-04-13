@@ -25,7 +25,7 @@ const connection = mysql.createConnection({
 });
 connection.connect();
 
-/*REST API POST 1*/
+/*REST API POST type 1*/
 app.post('/api', async (request, response) => {
     if (request.body.action && request.body.action === 'login') {
         const name = await Service.login(request.body.uid, request.body.password)
@@ -35,12 +35,14 @@ app.post('/api', async (request, response) => {
     } else if (request.body.action && request.body.action === 'loadplans') {
         const plans = await Service.loadPlans()
         response.send(JSON.stringify(plans))
-
-    }
+    } else if (request.body.action && request.body.action === 'deleteplan') {
+        await Service.deletePlan(request.body.plan)
+        response.send(JSON.stringify(true))
+  }
 })
 
 
-/*REST API POST 2*/
+/*REST API POST type 2*/
 app.post('/api/insert', (req, res) => {
     const data = req.body;
     console.log(data.uid)

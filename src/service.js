@@ -84,5 +84,30 @@ module.exports = class Service {
     }
 
 
+    /**
+     * Törli a megadott Tervet.
+     * 
+     * @param   {Plans}    plan    törlendő terv
+     * @returns {Promise}          promise Promise objektum
+     */
 
+    static async deletePlan(plan) {
+
+        console.log(`Terv törlése`)
+
+        // Inicializálás
+
+        const db = new Database(
+            config.db.host,
+            config.db.port,
+            config.db.user,
+            config.db.password,
+            config.db.dbname
+        )
+
+        await db.run(`
+                DELETE FROM PLANS
+                WHERE    PID = "${plan.PID}"
+            `)
+    }
 }

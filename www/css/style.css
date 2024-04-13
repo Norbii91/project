@@ -10,6 +10,11 @@ body {
     background: dodgerblue;
     height: 100vh;
 }
+
+.selected{
+    background: white !important;
+    background-color: white !important;
+}
 header {
     background: #fff;
     width: 100%;
@@ -184,8 +189,8 @@ form{
 
 /*MyPlans*/
 .legordulo{
-  margin-left: auto;        /* A jobb szélre igazítás margin használatával */
-  display: block;           /* Meggyőződünk róla, hogy blokk elemként jelenik meg */
+  margin-left: auto;       
+  display: block;           
   height: 50px;
 
 }
@@ -195,7 +200,6 @@ form{
     align-items: center;
     flex-basis: 100%;
     flex-grow: 1;
-    height: 45vh;
     padding: 0;
     margin: 0;
     padding-top: 80px;
@@ -242,11 +246,17 @@ select{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+#maintenanceTr{
+    align-self: right;
+    width: 100%;
+}
 
 @media only screen and (max-width: 1200px) {
     .navos {
         display: block;
+    }
+    .column{
+        padding-top: 10px;
     }
     body{
         height: 100%;
@@ -297,17 +307,23 @@ select{
         margin-top: 35px;
         transition: margin 500ms;
     }
+    .card{
+        margin-top: 5vh;
+        transition: margin 500ms;
+        height: 50vh;
+        width: 95vw;
+        overflow: auto;
+    }
     select{
         margin-top: 15px;
     }
-    .card{
-        transition: margin 500ms;
-        height: 70vh;
-        width: 80vw;
-    }
+
     #plantable{
-        width: 75vw;
+        width: 75vw !important;
         font-size: smaller;
+        height: auto;
+        margin-bottom: 25px;
+
     }
     input{
         width: 50vw;
@@ -325,6 +341,9 @@ select{
     .navos {
         display: block;
         
+    }
+    .column{
+        padding-top: 10px;
     }
     .container2{
         margin-top: 35px;
@@ -378,7 +397,8 @@ select{
         margin-top: 5vh;
         transition: margin 500ms;
         height: 70vh;
-        width: 80vw;
+        width: 95vw;
+        overflow: auto;
     }
     select{
         margin-top: 15px;
@@ -387,6 +407,9 @@ select{
     #plantable{
         width: 75vw !important;
         font-size: smaller;
+        height: auto;
+        margin-bottom: 25px;
+
     }
 
     textarea{
