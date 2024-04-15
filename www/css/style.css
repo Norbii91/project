@@ -168,7 +168,6 @@ form{
     height: 75vh;
     position: relative;
     box-sizing: border-box;
-    display: flex;
     border: 5px solid;
     margin: auto;
     flex-direction: row;  /* Display content in a row */
