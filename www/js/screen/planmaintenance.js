@@ -107,6 +107,3 @@ async function deletePlan() {
         await showPlans()
     }
 }
-
-
-

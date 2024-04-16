@@ -24,6 +24,7 @@ const connection = mysql.createConnection({
   password: 'admin',
   database: 'planner'
 });
+
 connection.connect();
 
 /*REST API POST type 1*/
