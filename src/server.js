@@ -16,6 +16,7 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+/*Második fajta API-hoz MySQL kapcsolat kiépítése*/
 const connection = mysql.createConnection({
   host: 'localhost',
   port:'3307',
@@ -32,10 +33,14 @@ app.post('/api', async (request, response) => {
 
         response.send(JSON.stringify({ name: name }))
         
-    } else if (request.body.action && request.body.action === 'loadplans') {
+    } 
+    /*Tervbetöltés' API-ja*/
+    else if (request.body.action && request.body.action === 'loadplans') {
         const plans = await Service.loadPlans()
         response.send(JSON.stringify(plans))
-    } else if (request.body.action && request.body.action === 'deleteplan') {
+    } 
+    /*Terv törlésének' API-ja*/
+    else if (request.body.action && request.body.action === 'deleteplan') {
         await Service.deletePlan(request.body.plan)
         response.send(JSON.stringify(true))
   }
