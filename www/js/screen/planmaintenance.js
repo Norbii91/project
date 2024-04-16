@@ -40,6 +40,7 @@ async function showPlans() {
             td.style.fontSize='bigger'
             td.style.textAlign='center'
             td.style.fontWeight='bold'
+            td.style.padding='5px'
            
             tr.appendChild(td)
 
