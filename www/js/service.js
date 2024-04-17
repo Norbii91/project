@@ -53,7 +53,7 @@ class Service {
     }
 
     /**
-     * Betölti a tantárgyak listáját.
+     * Betölti a tervek listáját.
      * 
      * @returns {Promise}   promise Promise objektum
      */
@@ -103,9 +103,9 @@ class Service {
 
 
     /**
-     * Törli a megadott tantárgyat.
+     * Törli a megadott tervet.
      * 
-     * @param   {Plans}   plan     törlendő tantárgy
+     * @param   {Plans}   plan     törlendő terv
      * @returns {Promise}   promise     Promise objektum
      */
 
