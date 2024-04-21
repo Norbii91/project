@@ -4,7 +4,7 @@ content-type: application/json
 
 { "action": "login", "uid": "admin", "password": "admin" }
 
-### Tervek betöltése
+### Tervek betöltése. Sikeres.
 POST http://localhost:9000/api HTTP/1.1
 content-type: application/json
 
